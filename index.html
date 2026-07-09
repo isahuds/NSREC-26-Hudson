@@ -53,6 +53,8 @@
     line-height:1.08;letter-spacing:-.01em;color:var(--ink);margin:0 0 22px;max-width:16ch}
   .byline{font-family:var(--sans);font-size:15.5px;color:var(--muted);margin:0 0 30px}
   .byline b{color:var(--ink);font-weight:600}
+  .byline sup{font-size:.68em;font-weight:600}
+  .byline .aff{display:block;font-size:13.5px;color:var(--faint);margin-top:6px;line-height:1.5}
   .lede{font-family:var(--serif);font-size:20px;line-height:1.6;color:var(--body);
     max-width:68ch;margin:0 0 30px}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
@@ -137,7 +139,8 @@
   <div class="wrap">
     <p class="eyebrow">IEEE NSREC 2026 · San Juan, Puerto Rico</p>
     <h1 class="title">Variability Analysis of TID-Induced Failure in a Complex Microcontroller</h1>
-    <p class="byline"><b>Isaac Hudson</b> and collaborators · Indiana University</p>
+    <p class="byline"><b>I. Hudson</b><sup>1</sup>, H. Hunnicutt<sup>1</sup>, K. Lingasubramanian<sup>2</sup>, and T. D. Loveless<sup>1</sup>
+      <span class="aff"><sup>1</sup>Intelligent Systems Engineering, Indiana University Bloomington · <sup>2</sup>CFD Research Corporation, Huntsville, AL</span></p>
     <p class="lede">Inter-device variability in TID-induced failure was observed across ninety-seven statically biased MSP430FR6989 microcontrollers spanning two fabrication lots, with a range in observed failure of roughly 120&nbsp;krad(SiO₂). Programmable bias and innate manufacturing variability are shown to be dominant factors setting the failure point — and the device's own internal oscillators, read with no added hardware, individualize dose-to-failure estimates through life.</p>
     <div class="hero-actions">
       <a class="btn" href="#motivation">Explore the walkthrough ↓</a>
@@ -169,7 +172,7 @@
       <div class="sec-head"><p class="sec-num">02 · Abstract</p><h2 class="sec-title">What the study shows</h2></div>
       <ul class="points">
         <li>Ninety-seven MSP430FR6989 microcontrollers from two fabrication lots were irradiated to functional failure, observed from <b>72 to 193&nbsp;krad(SiO₂)</b>.</li>
-        <li>Bias mode and fabrication lot set the failure point; the most conservative bias states have the least tolerance.</li>
+        <li>Bias mode and fabrication lot determine the failure point; the most conservative bias states have the least tolerance.</li>
         <li>Beyond worst-case TID screening is demonstrated using programmable bias knowledge and lot-identification methods.</li>
         <li>During irradiation, characteristics of a local oscillator provide individualized dose-to-failure estimates with no added hardware.</li>
       </ul>
@@ -330,7 +333,7 @@
   <div class="wrap">
     <div>
       <h3>Contact the author</h3>
-      <p>Isaac Hudson · Indiana University<br /><a href="mailto:isahudso@iu.edu">isahudso@iu.edu</a></p>
+      <p>Isaac Hudson · Reliable Electronic Systems (RES) Lab<br />Intelligent Systems Engineering, Indiana University Bloomington<br /><a href="mailto:isahudso@iu.edu">isahudso@iu.edu</a></p>
       <p>Questions about the data, models, or reproduction are welcome.</p>
     </div>
     <div>
@@ -340,7 +343,7 @@
       </div>
     </div>
     <div class="cite" style="grid-column:1/-1">
-      Presented at the IEEE Nuclear and Space Radiation Effects Conference (NSREC) 2026, San Juan, Puerto Rico. Companion page to the forthcoming full paper — figures and metrics mirror the poster.
+      Presented at the IEEE Nuclear and Space Radiation Effects Conference (NSREC) 2026, San Juan, Puerto Rico. Companion page to the forthcoming full paper — figures and metrics mirror the poster. This work was supported in part by the U.S. Department of Defense under contracts W52P1J-22-9-3009 and HDTRA1-20-2-0002.
     </div>
   </div>
 </footer>
