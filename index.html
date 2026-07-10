@@ -46,7 +46,12 @@
   @media(max-width:720px){.bar nav a.sec{display:none}}
 
   /* ---- hero ---- */
-  .hero{padding:76px 0 20px;border-bottom:1px solid var(--line)}
+  .hero{padding:56px 0 20px;border-bottom:1px solid var(--line)}
+  .hero-logos{display:flex;align-items:center;gap:30px;margin:0 0 34px;flex-wrap:wrap}
+  .hero-logos img{width:auto;opacity:.95}
+  .hero-logos .hl-create{height:44px}
+  .hero-logos .hl-nsrec{height:70px}
+  @media(max-width:520px){.hero-logos .hl-create{height:34px}.hero-logos .hl-nsrec{height:54px}}
   .eyebrow{font-family:var(--sans);font-weight:600;font-size:12.5px;letter-spacing:.12em;
     text-transform:uppercase;color:var(--crimson);margin:0 0 18px}
   h1.title{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,50px);
@@ -138,6 +143,10 @@
 
 <div class="hero">
   <div class="wrap">
+    <div class="hero-logos">
+      <img class="hl-create" src="images/logo-create-dark.png" alt="CREATE, Indiana University" />
+      <img class="hl-nsrec" src="images/logo-nsrec.png" alt="IEEE NSREC 2026, San Juan" />
+    </div>
     <p class="eyebrow">IEEE NSREC 2026 · San Juan, Puerto Rico</p>
     <h1 class="title">Variability Analysis of TID-Induced Failure in a Complex Microcontroller</h1>
     <p class="byline"><b>I. Hudson</b><sup>1</sup>, H. Hunnicutt<sup>1</sup>, K. Lingasubramanian<sup>2</sup>, and T. D. Loveless<sup>1</sup>
