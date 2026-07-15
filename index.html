@@ -150,7 +150,7 @@
     <p class="eyebrow">IEEE NSREC 2026 · San Juan, Puerto Rico</p>
     <h1 class="title">Variability Analysis of TID-Induced Failure in a Complex Microcontroller</h1>
     <p class="byline"><b>I. Hudson</b><sup>1</sup>, H. Hunnicutt<sup>1</sup>, K. Lingasubramanian<sup>2</sup>, and T. D. Loveless<sup>1</sup>
-      <span class="aff"><sup>1</sup>Intelligent Systems Engineering, Indiana University Bloomington · <sup>2</sup>CFD Research Corporation, Huntsville, AL</span></p>
+      <span class="aff"><sup>1</sup>Center for Reliable and Trusted Electronics, Indiana University Bloomington · <sup>2</sup>CFD Research Corporation, Huntsville, AL</span></p>
     <p class="lede">Inter-device variability in TID-induced failure was observed across ninety-seven statically biased MSP430FR6989 microcontrollers spanning two fabrication lots, with a range in observed failure of roughly 120&nbsp;krad(SiO₂). Programmable bias and innate manufacturing variability are shown to be dominant factors setting the failure point — and the device's own internal oscillators, read with no added hardware, individualize dose-to-failure estimates through life.</p>
     <div class="hero-actions">
       <a class="btn" href="#motivation">Explore the walkthrough ↓</a>
@@ -274,7 +274,7 @@
         <div class="col-fig">
           <figure class="fig">
             <a href="images/fig-prerad-strips.png" target="_blank" rel="noopener"><img src="images/fig-prerad-strips.png" alt="Pre-irradiation prediction strips" /></a>
-            <figcaption><b>Fig. 4</b> — Predicted versus observed failure dose from a single pre-irradiation reading, per device and bias mode.</figcaption>
+            <figcaption><b>Fig. 4</b> — Predicted versus observed failure dose, one point per device, from the pooled lot-blind Mode + VLO model.</figcaption>
           </figure>
         </div>
       </div>
@@ -294,7 +294,7 @@
             <li>In flight, the same oscillator can stand in for a dosimeter and act as an end-of-life alarm.</li>
             <li>Bias + VLO period alone matches dose-informed accuracy (overlapping confidence intervals) — a self-contained health monitor using gradient-boosted regression trees.</li>
             <li>Swing features of both oscillators improve near-failure predictions, potentially generalizing to any clock output.</li>
-            <li>Models using VLO features underpredict dose-to-failure for devices with a large gap between observed I/O failure and clock death.</li>
+            <li>Models using VLO features overpredict remaining dose (optimistic) for devices whose clock outlives the observed I/O failure (clock survives, Fig. 5A).</li>
             <li>The close band represents the last two captures (≈24&nbsp;krad(SiO₂)) before failure.</li>
           </ul>
         </div>
@@ -319,7 +319,7 @@
         <ul class="points" style="max-width:none">
           <li><b>Train.</b> 50 random device-level splits — 80% (pre-rad) and 70% (in-situ) training; the remaining 20% and 30% are held out.</li>
           <li><b>Validation.</b> Model choices are made one split at a time from each candidate's held-out performance on the other 49 splits (leave-one-split-out).</li>
-          <li><b>Test.</b> The selected model's predictions on each split's held-out devices are scored; reported metrics pool these predictions across all 50 splits — no model is ever scored on a device it trained on.</li>
+          <li><b>Test.</b> The selected model's predictions on each split's held-out devices are scored; reported metrics aggregate these predictions across all 50 splits — no model is ever scored on a device it trained on.</li>
         </ul>
       </div>
     </div>
@@ -329,7 +329,7 @@
     <div class="wrap">
       <div class="sec-head"><p class="sec-num">09 · Takeaways</p><h2 class="sec-title">Conclusions</h2></div>
       <ul class="points">
-        <li>Knowledge of application bias states and lot membership informs device performance past worst-case.</li>
+        <li>Knowledge of application bias states and lot membership informs TID survival predictions past worst-case.</li>
         <li>Period-derived measurements of the device's VLO inform prognostic models through life.</li>
         <li>Rail-to-rail voltage swing at the shared output path of two distinct oscillators informs these models in late life.</li>
         <li>The lot recovery demonstrated here separates two extensively screened lots; extending the screen to devices of unknown provenance is future work.</li>
@@ -343,7 +343,7 @@
   <div class="wrap">
     <div>
       <h3>Contact the author</h3>
-      <p>Isaac Hudson · Reliable Electronic Systems (RES) Lab<br />Intelligent Systems Engineering, Indiana University Bloomington<br /><a href="mailto:isahudso@iu.edu">isahudso@iu.edu</a></p>
+      <p>Isaac Hudson · RES Lab, Center for Reliable and Trusted Electronics<br />Indiana University Bloomington<br /><a href="mailto:isahudso@iu.edu">isahudso@iu.edu</a></p>
       <p>Questions about the data, models, or reproduction are welcome.</p>
     </div>
     <div>
