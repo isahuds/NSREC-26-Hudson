@@ -55,7 +55,9 @@
   .eyebrow{font-family:var(--sans);font-weight:600;font-size:12.5px;letter-spacing:.12em;
     text-transform:uppercase;color:var(--crimson);margin:0 0 18px}
   h1.title{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,50px);
-    line-height:1.08;letter-spacing:-.01em;color:var(--ink);margin:0 0 22px;max-width:16ch}
+    line-height:1.08;letter-spacing:-.01em;color:var(--ink);margin:0 0 14px;max-width:16ch}
+  .tns-title{font-family:var(--serif);font-style:italic;font-size:16.5px;line-height:1.5;
+    color:var(--muted);margin:0 0 22px;max-width:62ch}
   .byline{font-family:var(--sans);font-size:15.5px;color:var(--muted);margin:0 0 30px}
   .byline b{color:var(--ink);font-weight:600}
   .byline sup{font-size:.68em;font-weight:600}
@@ -149,8 +151,9 @@
     </div>
     <p class="eyebrow">IEEE NSREC 2026 · San Juan, Puerto Rico</p>
     <h1 class="title">Variability Analysis of TID-Induced Failure in a Complex Microcontroller</h1>
-    <p class="byline"><b>I. Hudson</b><sup>1</sup>, H. Hunnicutt<sup>1</sup>, K. Lingasubramanian<sup>2</sup>, and T. D. Loveless<sup>1</sup>
-      <span class="aff"><sup>1</sup>Center for Reliable and Trusted Electronics, Indiana University Bloomington · <sup>2</sup>CFD Research Corporation, Huntsville, AL</span></p>
+    <p class="tns-title">(TNS title: Individualized Screening and In-Situ Health Monitoring for TID-Induced Effects in a Complex Microcontroller)</p>
+    <p class="byline"><b>I. Hudson</b>, H. Hunnicutt, and T. D. Loveless
+      <span class="aff">Center for Reliable and Trusted Electronics, Indiana University Bloomington</span></p>
     <p class="lede">Inter-device variability in TID-induced failure was observed across ninety-seven statically biased MSP430FR6989 microcontrollers spanning two fabrication lots, with a range in observed failure of roughly 120&nbsp;krad(SiO₂). Programmable bias and innate manufacturing variability are shown to be dominant factors setting the failure point — and the device's own internal oscillators, read with no added hardware, individualize dose-to-failure estimates through life.</p>
     <div class="hero-actions">
       <a class="btn" href="#motivation">Explore the walkthrough ↓</a>
